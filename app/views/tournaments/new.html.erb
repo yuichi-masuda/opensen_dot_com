@@ -1,2 +1,17 @@
-<h1>Tournaments#new</h1>
-<p>Find me in app/views/tournaments/new.html.erb</p>
+<h1>大会を作成</h1>
+<%= form_for(@tournament) do |f| %>
+    <p><%= f.label :name, "大会名" %>
+    <%= f.text_field :name %></p>
+    <p><%= f.label :event_date, "開催日" %>
+    <%= f.datetime_select :event_date %></p>
+    <p><%= f.label :place, "場所" %>
+    <%= f.text_field :place %></p>
+    <p><%= f.label :athletic_event, "種目" %>
+    <%= f.text_field :athletic_event %></p>
+    <p><%= f.label :note, "備考" %>
+    <%= f.text_area :note %></p>
+    <p><%= f.label :deadline, "締切日" %>
+    <%= f.datetime_select :deadline %></p>
+    <p><%= f.submit %></p>
+
+<% end %>
