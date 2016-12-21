@@ -1,2 +1,16 @@
 <h1>Tournaments#index</h1>
 <p>Find me in app/views/tournaments/index.html.erb</p>
+<table>
+  <tr>
+    <th>大会名</th>
+    <th>開催日</th>
+    <th>場所</th>
+  </tr>
+  <% @tournaments.each do |tournament| %>
+  <tr>
+    <td><%= link_to tournament.name, tournament_path(tournament) %></td>
+    <td><%= tournament.event_date %></td>
+    <td><%= tournament.place %></td>
+  </tr>
+  <% end %>
+</table>
