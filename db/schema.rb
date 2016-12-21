@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161221134425) do
+ActiveRecord::Schema.define(version: 20161221141143) do
 
   create_table "participant_teams", force: true do |t|
     t.string   "name"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20161221134425) do
     t.string   "athletic_event"
     t.string   "note"
     t.date     "deadline"
-    t.boolean  "published"
+    t.boolean  "published",      default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
