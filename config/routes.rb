@@ -4,6 +4,6 @@ Rails.application.routes.draw do
       resources :teammates
     end
   end
-  
+
   root :to => 'tournaments#index'
 end
